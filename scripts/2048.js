@@ -2,7 +2,7 @@ let { init,
       Text,
       Sprite,
       initInput,
-      onKey,
+      onInput,
       GameLoop
     } = kontra;
 
@@ -688,7 +688,7 @@ onInput(['arrowright', 'swiperight'], (e) => {
     updateBoardGameOverWrapper('R', grid);
 });
 
-onInput(['arrowrleft', 'swipeleft'], (e) => {
+onInput(['arrowleft', 'swipeleft'], (e) => {
     updateBoardGameOverWrapper('L', grid);
 })
 
