@@ -692,10 +692,10 @@ onInput(['arrowleft', 'swipeleft'], (e) => {
     updateBoardGameOverWrapper('L', grid);
 })
 
-onKey(['arrowup', 'swipeup'], (e) => {
+onInput(['arrowup', 'swipeup'], (e) => {
     updateBoardGameOverWrapper('U', grid);
 })
 
-onKey(['arrowdown', 'swipedown'], (e) => {
+onInput(['arrowdown', 'swipedown'], (e) => {
     updateBoardGameOverWrapper('D', grid);
 })
