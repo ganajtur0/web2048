@@ -1,14 +1,14 @@
 let { init,
       Text,
       Sprite,
-      initKeys,
+      initInput,
       onKey,
       GameLoop
     } = kontra;
 
 let { canvas, context } = init();
 
-initKeys();
+initInput();
 
 let loop_stopped = true;
 let game_over = false;
@@ -684,18 +684,18 @@ const updateBoardGameOverWrapper = (direction, grid) => {
 
 initBoard();
 
-onKey('arrowright', (e) => {
+onInput(['arrowright', 'swiperight'], (e) => {
     updateBoardGameOverWrapper('R', grid);
 });
 
-onKey('arrowleft', (e) => {
+onInput(['arrowrleft', 'swipeleft'], (e) => {
     updateBoardGameOverWrapper('L', grid);
 })
 
-onKey('arrowup', (e) => {
+onKey(['arrowup', 'swipeup'], (e) => {
     updateBoardGameOverWrapper('U', grid);
 })
 
-onKey('arrowdown', (e) => {
+onKey(['arrowdown', 'swipedown'], (e) => {
     updateBoardGameOverWrapper('D', grid);
 })
